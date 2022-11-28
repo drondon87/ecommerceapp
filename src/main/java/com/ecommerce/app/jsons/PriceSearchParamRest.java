@@ -17,6 +17,17 @@ public class PriceSearchParamRest {
 		return applicationDate;
 	}
 
+	public PriceSearchParamRest() {
+		super();
+	}
+
+	public PriceSearchParamRest(String applicationDate, String product, String brand) {
+		super();
+		this.applicationDate = applicationDate;
+		this.product = product;
+		this.brand = brand;
+	}
+
 	public void setApplicationDate(String applicationDate) {
 		this.applicationDate = applicationDate;
 	}
