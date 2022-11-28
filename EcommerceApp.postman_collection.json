@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "5b205f5f-ea1d-442e-a09e-7cc5440b5f5f",
+		"name": "EcommerceApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5755512"
+	},
+	"item": [
+		{
+			"name": "FindAllPrices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/price",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"price"
+					]
+				},
+				"description": "This endpoint search all the prices saved in the Database."
+			},
+			"response": []
+		},
+		{
+			"name": "FindPricesBySerchParams",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"applicationDate\": \"2020-06-14 10:00:00\",\r\n    \"product\": \"35455\",\r\n    \"brand\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/price/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"price",
+						"search"
+					]
+				},
+				"description": "Find all prices using the search params as brand, product and applicationdate"
+			},
+			"response": []
+		}
+	]
+}
